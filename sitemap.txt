@@ -1,2 +1,1 @@
-https://intro2chess.github.io/
-https://intro2chess.github.io/index.html
+https://taharostami.github.io/intro2chess/
