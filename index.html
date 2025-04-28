@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="ZnN8F90tUwuNWbMRaooBlPn_Kr_ES9WiHSL_KwHlEOE" />
+    <meta name="description" content="Learn chess with confidence! Our free online chess course for beginners offers animated lessons, real-world strategies, and expert insights.">
+    <title>Intro to Chess Course</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Full-page layout */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        /* Section Title */
+        .section-title {
+	    cursor: text !important; /* Force cursor */
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        /* Section Description */
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for images */
+        .img-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            filter: brightness(1.2);
+        }
+
+        /* Section Container */
+        .section-container {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Section hover effect */
+        .section-container:hover {
+            background-color: #f4f4f4;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Alternate Background Colors for Different Sections */
+        .section-container:nth-child(odd) {
+            background-color: #fafafa;
+        }
+
+        .section-container:nth-child(even) {
+            background-color: #e6e6e6;
+        }
+
+        /* Gradient effect for the section titles */
+        .section-title {
+            background: linear-gradient(to right, #fff, #333);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Section title hover effect */
+        .section-title:hover {
+            color: #000;
+            cursor: pointer;
+        }
+
+        /* Card Style for Image Sections */
+        .card-custom {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-custom img {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+    .accordion-button:focus {
+        border-color: #d99873 !important; /* Custom border color */
+        box-shadow: 0 0 0 0.25rem rgba(224, 123, 57, 0.5) !important; /* Orange glow */
+    }
+    .eee_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -0px -0px;width:303px;height:986px;transform: scale(0.6); }
+    .anim_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -0px -986px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c1_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -0px -1306px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c10_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -0px -1626px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .a2_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -0px -1946px;width:148px;height:102px;transform-origin:51px 74px;-moz-transform-origin:51px 74px;-ms-transform-origin:51px 74px;-webkit-transform-origin:51px 74px;-o-transform-origin:51px 74px;transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-webkit-transform:rotate(-90deg);-o-transform:rotate(-90deg);margin-left:24px;margin-top:2px }
+    .a1_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -148px -1946px;width:150px;height:89px;transform-origin:44.5px 75px;-moz-transform-origin:44.5px 75px;-ms-transform-origin:44.5px 75px;-webkit-transform-origin:44.5px 75px;-o-transform-origin:44.5px 75px;transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-webkit-transform:rotate(-90deg);-o-transform:rotate(-90deg);margin-left:27px;margin-top:0px }
+    .c11_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -303px -0px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c12_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -303px -320px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c13_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -303px -640px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c14_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -320px -960px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c15_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -320px -1280px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c16_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -320px -1600px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c2_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -623px -0px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c3_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -623px -320px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c4_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -623px -640px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c5_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -640px -960px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c6_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -640px -1280px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c7_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -640px -1600px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c8_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -943px -0px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .c9_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -943px -320px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .exp_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -943px -640px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .freefree_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -1263px -0px;width:320px;height:320px;  transform: scale(0.6); transform-origin: bottom center;margin-left:50px;}
+    .no_pre_req_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -1583px -0px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px;}
+    .pace_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -1263px -320px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px; }
+    .t1_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -1583px -320px;width:320px;height:320px; transform: scale(0.6); transform-origin: bottom center;margin-left:50px;}
+    .a3_png { display:inline-block;overflow:hidden;background:url(texture.png) no-repeat -1263px -640px;width:150px;height:149px; transform: scale(0.4); transform-origin: bottom center;margin-left:50px; }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <!-- Header Section (Full-width image with text on top) -->
+        <header class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="text-center text-md-start ps-5">
+                <p class="display-4">INTRO TO CHESS</p>
+                <p class="h5">FREE ONLINE COURSE FOR ABSOLUTE BEGINNERS!</p>
+		<br/>
+                <p class="display-8">Learn chess at your own pace with clear and engaging animated lessons!</p>
+            </div>
+            <div class="img-fluid eee_png" alt="Chess Image" style="max-width: 350px;"></div>
+        </header>
+
+	<br/><br/><hr/><br/><br/><br/>
+
+        <!-- Why This Course Section (With Cards) -->
+<section class="my-5r">
+    <h2 class="text-center section-title">FEATURES</h2>
+	<br/><br/>
+    <p class="text-center section-description">This course respects you—your goals, pace, and learning style. Combining real-world chess expertise with scientific insights, it offers concise, effective explanations supported by engaging animations.
+
+Perfect for beginners, it’s completely free and lets you learn at your own pace.</p>
+<br/>
+
+<div class="row justify-content-center">
+    <!-- Card 1: Respects Your Time -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="t1_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Respects Your Time</h5>
+                <h6>Learn all rules and notations in just 1 hour and 15 minutes, with an additional 1 hour and 45 minutes to improve your gameplay and make better moves.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2: Real-Life Experience -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="exp_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Real-Life Experience</h5>
+                <h6>The best of both worlds: Chess expertise from a former player, combined with scientific insights.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3: Designed for Absolute Beginners -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="no_pre_req_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Designed for Absolute Beginners</h5>
+                <h6>No prerequisite or prior knowledge required.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4: Free -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="freefree_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Free</h5>
+                <h6>No cost, just an optional donation if you find the course helpful.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5: Learn at Your Own Pace -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="pace_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Learn at Your Own Pace</h5>
+                <h6>Study in your own style, with your own goals, and at your own pace—no rigid schedule.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 6: Incorporates Animations -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="anim_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>Incorporates Animations</h5>
+                <h6>Tired of clickbait AI-generated thumbnails? This course truly uses engaging animations to enhance your learning experience.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+	<br/><br/><hr/><br/><br/>
+
+<!-- Syllabus Section (With Cards) -->
+<section class="my-5r">
+    <h2 class="text-center section-title">CONTENTS</h2>
+    <br/><br/>
+    <p class="text-center section-description">This course is divided into two parts. Part one focuses on learning the essential chess rules and notation, while part two focuses on improving your gameplay and strategy.</p>
+    <br/>
+
+    <!-- Part 1: Rules & Notation -->
+    <div class="row justify-content-center">
+        <!-- Card 1: S1 - A Quick Tour -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c1_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S1: A Quick Tour</h5>
+                    <h6>Overview of essential chess concepts, including the chessboard, pieces, clock, careers, etc.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: S2 - Coordinates -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c2_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S2: Coordinates</h5>
+                    <h6>Learn chessboard coordinates, essential for communication and move notation.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: S3 - Chess Pieces -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c3_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S3: Chess Pieces</h5>
+                    <h6>Four videos explaining the movement of the knight, pawn, king, and other pieces.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: S4 - Game Results -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c4_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S4: Game Results</h5>
+                    <h6>Understand how games end—win, loss, or draw—along with important conditions.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: TA1 - Practice by Playing Online -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c5_png img-fluid rounded-circle"></div>            
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>TA1: Practice by Playing Online</h5>
+                    <h6>Get introduced to a popular chess platform to start playing and practicing for free.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6: S5 - Chess Notation -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c6_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S5: Chess Notation</h5>
+                    <h6>Learn how to read and record chess moves using chess notation.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7: TA2 - Practice Chess Notation -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c7_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>TA2: Practice Chess Notation</h5>
+                    <h6>Practice reading and writing chess notation with free online tools.</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<hr style="border: 0; border-top: 2px dashed #D2691E; margin: 30px 0;"> <br/>
+    <!-- Part 2: Gameplay Improvement -->
+    <div class="row justify-content-center">
+        <!-- Card 8: S6 - Game Tree -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c8_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S6: Game Tree</h5>
+                    <h6>Learn how to systematically evaluate good moves using the Game Tree method.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9: S7 - Piece Checkmates -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c9_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S7: Piece Checkmates</h5>
+                    <h6>Master basic checkmates and improve your strategy using the Game Tree approach.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 10: TA3 - Practice Piece Checkmates -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c10_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>TA3: Practice Piece Checkmates</h5>
+                    <h6>Practice checkmating patterns using free online tools and improve your speed.</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 11: S8 - Endgame -->
+        <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+            <div class="card w-100 img-hover border-0" style="background: transparent;">
+                <div class="c11_png img-fluid rounded-circle"></div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                    <h5>S8: Endgame</h5>
+                    <h6>Master the endgame with patterns like the Square Rule and pawn endgames.</h6> </div> </div> </div>
+ <!-- Card 12: S9 - Complex Position Evaluation -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="c12_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>S9: Complex Position Evaluation</h5>
+                <h6>Optimize your evaluation of complex positions in a limited amount of time.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 13: S10 - Chess Openings -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="c13_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>S10: Chess Openings</h5>
+                <h6>Learn chess opening principles to start with a strong position and develop your pieces efficiently.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 14: TA4 - Practice Chess Openings -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="c14_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>TA4: Practice Chess Openings</h5>
+                <h6>Learn how to practice chess openings with free online tools.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 15: S11 - Game Analysis -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="c15_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>S11: Game Analysis</h5>
+                <h6>Learn how to analyze games to improve your play by studying real examples.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 16: TA5 - Practice Game Analysis -->
+    <div class="col-12 col-md-4 text-center mb-4 d-flex justify-content-center">
+        <div class="card w-100 img-hover border-0" style="background: transparent;">
+            <div class="c16_png img-fluid rounded-circle"></div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center" style="background: transparent;">
+                <h5>TA5: Practice Game Analysis</h5>
+                <h6>Learn how to analyze games yourself using free online chess tools and engines.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Centralized Button for YouTube Playlist -->
+    <div class="text-center mt-5">
+        <a href="https://www.youtube.com/playlist?list=PLQHrs8NB2DpzBFvLb6Tah6rMqQ4_5jgJo" class="btn btn-danger btn-lg" style="background-color:#bf5215;" target="_blank">Go to Playlist on YouTube</a>
+    </div>
+</section>
+
+
+<br/><br/><hr/><br/><br/>
+	
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="py-2 text-center">
+
+<br/>
+    <p class="text-center">© 2024 Intro to Chess Course. All rights reserved.</p>
+</footer>
+
+</div>
+
+
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('taharostami', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Donate',
+    'floating-chat.donateButton.background-color': '#f45d22',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
